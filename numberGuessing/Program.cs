@@ -14,36 +14,36 @@
                 Console.WriteLine("2 - Medium -> Numbers 1 - 150");
                 Console.WriteLine("3 - Hard -> Numbers 1 - 400");
                 Console.WriteLine("4 - Literally Impossible -> Numbers 1 - 1.000.000\n");
-                
+
                 int difficultySelect = int.Parse(Console.ReadLine());
 
-                if (difficultySelect == 1) 
+                if (difficultySelect == 1)
                 {
-                    play = playEasy();
+                    play = PlayEasy();
                 }
                 if (difficultySelect == 2)
                 {
-                    play = playMedium();
+                    play = PlayMedium();
                 }
                 if (difficultySelect == 3)
                 {
-                    play = playHard();
+                    play = PlayHard();
                 }
                 if (difficultySelect == 4)
                 {
-                    play = playImpossible();
+                    play = PlayImpossible();
                 }
 
 
             }
         }
 
-        static string GameLoop(int GameNumber, string difficulty)
+        static string GameLoop(int gameNumber, string difficulty)
         {
             int tries = 0;
             Console.WriteLine($"You've chosen {difficulty}! Let's start now.\n");
             var userInput = 0;
-            while (userInput != GameNumber)
+            while (userInput != gameNumber)
             {
                 tries += 1;
                 if (tries == 10)
@@ -54,23 +54,23 @@
                 Console.Write("\nTake a guess: ");
                 userInput = int.Parse(Console.ReadLine());
 
-                if (userInput < GameNumber)
+                if (userInput < gameNumber)
                 {
                     Console.WriteLine("Your guess is lower than the number we are looking for!");
                 }
-                else if (userInput > GameNumber)
+                else if (userInput > gameNumber)
                 {
                     Console.WriteLine("Your guess is higher than the number we are looking for!");
                 }
-                else if (userInput == GameNumber)
+                else if (userInput == gameNumber)
                 {
                     Console.WriteLine("You've guessed correctly! Nicely done!");
                 }
 
-                if (tries > 10) 
+                if (tries > 10)
                 {
                     Console.WriteLine("All tries used! \nPress Enter to continue");
-                    userInput = GameNumber;           
+                    userInput = gameNumber;
                     Console.ReadLine();
                 }
 
@@ -78,7 +78,7 @@
 
             Console.WriteLine("Wanna play again? (yes/no)");
             string playUpdate = Console.ReadLine();
-            while (playUpdate != "yes" &&  playUpdate != "no")
+            while (playUpdate != "yes" && playUpdate != "no")
             {
                 Console.WriteLine("Wanna play again? (yes/no)");
                 playUpdate = Console.ReadLine();
@@ -87,7 +87,7 @@
             return playUpdate;
         }
 
-        static string playEasy()
+        static string PlayEasy()
         {
             var difficulty = "Easy";
             Random generator = new Random();
@@ -98,7 +98,7 @@
 
             return playUpdate;
         }
-        static string playMedium()
+        static string PlayMedium()
         {
             var difficulty = "Medium";
             Random generator = new Random();
@@ -109,7 +109,7 @@
 
             return playUpdate;
         }
-        static string playHard()
+        static string PlayHard()
         {
             var difficulty = "Hard";
             Random generator = new Random();
@@ -120,7 +120,7 @@
 
             return playUpdate;
         }
-        static string playImpossible()
+        static string PlayImpossible()
         {
             var difficulty = "Impossible";
             Random generator = new Random();

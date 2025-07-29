@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\numberGuessing\\numberGuessing\\numberGuessing.csproj": {}
+    "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\Cs-numberGuessing\\numberGuessing\\numberGuessing.csproj": {}
   },
   "projects": {
-    "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\numberGuessing\\numberGuessing\\numberGuessing.csproj": {
+    "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\Cs-numberGuessing\\numberGuessing\\numberGuessing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\numberGuessing\\numberGuessing\\numberGuessing.csproj",
+        "projectUniqueName": "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\Cs-numberGuessing\\numberGuessing\\numberGuessing.csproj",
         "projectName": "numberGuessing",
-        "projectPath": "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\numberGuessing\\numberGuessing\\numberGuessing.csproj",
+        "projectPath": "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\Cs-numberGuessing\\numberGuessing\\numberGuessing.csproj",
         "packagesPath": "C:\\Users\\j.bauriedl\\.nuget\\packages\\",
-        "outputPath": "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\numberGuessing\\numberGuessing\\obj\\",
+        "outputPath": "H:\\Code\\VisualStudio\\C#\\Csharp_learningprogress\\Übungen\\6 - loops & conditions\\Cs-numberGuessing\\numberGuessing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
