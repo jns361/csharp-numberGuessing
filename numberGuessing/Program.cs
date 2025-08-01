@@ -16,26 +16,38 @@
                 Console.WriteLine("4 - Literally Impossible -> Numbers 1 - 1.000.000\n");
 
                 int difficultySelect = int.Parse(Console.ReadLine());
-
-                if (difficultySelect == 1)
-                {
-                    play = PlayEasy();
-                }
-                if (difficultySelect == 2)
-                {
-                    play = PlayMedium();
-                }
-                if (difficultySelect == 3)
-                {
-                    play = PlayHard();
-                }
-                if (difficultySelect == 4)
-                {
-                    play = PlayImpossible();
-                }
-
+                play = SetupGame(difficultySelect);
 
             }
+        }
+
+        static string SetupGame(int difficultySelect)
+        {
+            Random generator = new Random();
+            var GameNumber = generator.Next(1, 50);
+            var difficulty = "Easy";
+
+            if (difficultySelect == 2)
+            {
+                difficulty = "Medium";
+                GameNumber = generator.Next(1, 150);
+            }
+
+            if (difficultySelect == 3)
+            {
+                GameNumber = generator.Next(1, 400);
+                difficulty = "Hard";
+            }
+
+            if (difficultySelect == 4)
+            {
+                GameNumber = generator.Next(1, 1000000);
+                difficulty = "Impossible";
+            }
+
+            string playUpdate = GameLoop(GameNumber, difficulty);
+
+            return playUpdate;
         }
 
         static string GameLoop(int gameNumber, string difficulty)
@@ -67,9 +79,9 @@
                     Console.WriteLine("You've guessed correctly! Nicely done!");
                 }
 
-                if (tries > 10)
+                if (tries == 10)
                 {
-                    Console.WriteLine("All tries used! \nPress Enter to continue");
+                    Console.WriteLine("\nAll tries used! \nPress Enter to continue");
                     userInput = gameNumber;
                     Console.ReadLine();
                 }
@@ -87,49 +99,5 @@
             return playUpdate;
         }
 
-        static string PlayEasy()
-        {
-            var difficulty = "Easy";
-            Random generator = new Random();
-            var GameNumber = generator.Next(1, 50);
-            string playUpdate = GameLoop(GameNumber, difficulty);
-
-
-
-            return playUpdate;
-        }
-        static string PlayMedium()
-        {
-            var difficulty = "Medium";
-            Random generator = new Random();
-            var GameNumber = generator.Next(1, 150);
-            string playUpdate = GameLoop(GameNumber, difficulty);
-
-
-
-            return playUpdate;
-        }
-        static string PlayHard()
-        {
-            var difficulty = "Hard";
-            Random generator = new Random();
-            var GameNumber = generator.Next(1, 400);
-            string playUpdate = GameLoop(GameNumber, difficulty);
-
-
-
-            return playUpdate;
-        }
-        static string PlayImpossible()
-        {
-            var difficulty = "Impossible";
-            Random generator = new Random();
-            var GameNumber = generator.Next(1, 1000000);
-            string playUpdate = GameLoop(GameNumber, difficulty);
-
-
-
-            return playUpdate;
-        }
     }
 }
